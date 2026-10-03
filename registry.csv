@@ -1,0 +1,61 @@
+id;deck;type;question
+id-js-basics-kprim-001;JavaScript::Основы и типы;kprim;Оператор typeof. Верно или неверно?
+id-js-basics-kprim-002;JavaScript::Основы и типы;kprim;Примитивы и объекты. Верно или неверно?
+id-js-basics-kprim-003;JavaScript::Основы и типы;kprim;Приведение объекта к примитиву. Верно или неверно?
+id-js-basics-kprim-004;JavaScript::Основы и типы;kprim;Нестрогое и строгое сравнение. Верно или неверно?
+id-js-basics-kprim-005;JavaScript::Основы и типы;kprim;Алгоритм нестрогого равенства <code>==</code>. Верно или неверно?
+id-js-basics-mc-001;JavaScript::Основы и типы;mc;Какие из значений являются примитивами?
+id-js-basics-mc-002;JavaScript::Основы и типы;mc;Какие из вызовов <code>Boolean()</code> вернут <code>true</code>?
+id-js-basics-mc-003;JavaScript::Основы и типы;mc;Какие нестрогие сравнения вернут <code>true</code>?
+id-js-basics-mc-004;JavaScript::Основы и типы;mc;Какие выражения корректно проверяют, что <code>x</code> равен null или undefined?
+id-js-basics-sc-001;JavaScript::Основы и типы;sc;Сколько типов данных определено в спецификации JavaScript?
+id-js-basics-sc-002;JavaScript::Основы и типы;sc;Что вернёт <code>typeof function () {}</code>?
+id-js-basics-sc-003;JavaScript::Основы и типы;sc;Как у строкового примитива получается вызвать метод <code>'abc'.toUpperCase()</code>?
+id-js-basics-sc-004;JavaScript::Основы и типы;sc;Что выведет код в нестрогом режиме?<pre><code>let s = 'hi'<br>s.foo = 1<br>console.log(s.foo)</code></pre>
+id-js-basics-sc-005;JavaScript::Основы и типы;sc;Что вернёт <code>Symbol('id') === Symbol('id')</code>?
+id-js-basics-sc-006;JavaScript::Основы и типы;sc;Бэкенд присылает JSON с полем <code>id: 9007199254740993</code>. Что окажется в <code>data.id</code> после JSON.parse?
+id-js-basics-sc-007;JavaScript::Основы и типы;sc;Что вернёт <code>'5' - 2</code>?
+id-js-basics-sc-008;JavaScript::Основы и типы;sc;Что вернёт <code>'5' + 2</code>?
+id-js-basics-sc-009;JavaScript::Основы и типы;sc;Что вернёт <code>Number('')</code>?
+id-js-basics-sc-010;JavaScript::Основы и типы;sc;Что вернёт <code>parseInt('12px')</code>?
+id-js-basics-sc-011;JavaScript::Основы и типы;sc;Что вернёт <code>[1, 2] + [3]</code>?
+id-js-basics-sc-012;JavaScript::Основы и типы;sc;Что вернёт <code>null + 1</code>?
+id-js-basics-sc-013;JavaScript::Основы и типы;sc;Что вернёт <code>Boolean(new Boolean(false))</code>?
+id-js-basics-sc-014;JavaScript::Основы и типы;sc;Что вернёт <code>null == 0</code>?
+id-js-basics-sc-015;JavaScript::Основы и типы;sc;Что вернёт <code>null >= 0</code>?
+id-js-basics-sc-016;JavaScript::Основы и типы;sc;Что вернёт <code>'2' > '12'</code>?
+id-js-basics-sc-017;JavaScript::Основы и типы;sc;Какое выражение вернёт <code>true</code>, если <code>x = NaN</code>?
+id-js-basics-sc-018;JavaScript::Основы и типы;sc;Чем <code>Object.is(a, b)</code> отличается от <code>a === b</code>?
+id-js-basics-sc-019;JavaScript::Основы и типы;sc;Что вернёт <code>[1] == 1</code>?
+id-js-basics-sc-020;JavaScript::Основы и типы;sc;Что вернёт <code>'true' == true</code>?
+id-js-basics-sc-021;JavaScript::Основы и типы;sc;Для какой проверки многие код-стайлы разрешают нестрогое <code>==</code>?
+id-cli-commands-kprim-001;Командная строка::Ходовые команды;kprim;Навигация по каталогам. Верно или неверно?
+id-cli-commands-kprim-002;Командная строка::Ходовые команды;kprim;Флаги <code>ls</code>. Верно или неверно?
+id-cli-commands-kprim-003;Командная строка::Ходовые команды;kprim;Управление просмотрщиком <code>less</code>. Верно или неверно?
+id-cli-commands-kprim-004;Командная строка::Ходовые команды;kprim;Флаги <code>grep</code>. Верно или неверно?
+id-cli-commands-kprim-005;Командная строка::Ходовые команды;kprim;Процессы и сигналы. Верно или неверно?
+id-cli-commands-kprim-006;Командная строка::Ходовые команды;kprim;Командная строка в macOS и Linux. Верно или неверно?
+id-cli-commands-mc-001;Командная строка::Ходовые команды;mc;Какими командами можно удалить пустой каталог <code>tmp</code>?
+id-cli-commands-mc-002;Командная строка::Ходовые команды;mc;Какие команды выведут первые 5 строк файла <code>f</code>?
+id-cli-commands-mc-003;Командная строка::Ходовые команды;mc;В каких командах флаги <code>-l</code> и <code>-a</code> переданы корректно?
+id-cli-commands-sc-001;Командная строка::Ходовые команды;sc;Что делает <code>cd -</code>?
+id-cli-commands-sc-002;Командная строка::Ходовые команды;sc;Какой флаг <code>ls</code> показывает скрытые файлы, имена которых начинаются с точки?
+id-cli-commands-sc-003;Командная строка::Ходовые команды;sc;Что показывает <code>ls -l</code>?
+id-cli-commands-sc-004;Командная строка::Ходовые команды;sc;Как создать вложенные каталоги <code>a/b/c</code> одной командой, если каталога <code>a</code> ещё нет?
+id-cli-commands-sc-005;Командная строка::Ходовые команды;sc;Что сделает <code>touch notes.txt</code>, если файл уже существует?
+id-cli-commands-sc-006;Командная строка::Ходовые команды;sc;Как скопировать каталог <code>src</code> со всем содержимым в <code>backup</code>?
+id-cli-commands-sc-007;Командная строка::Ходовые команды;sc;Что сделает <code>mv old.txt new.txt</code> в пределах одного каталога?
+id-cli-commands-sc-008;Командная строка::Ходовые команды;sc;Что делает флаг <code>-f</code> у команды <code>rm</code>?
+id-cli-commands-sc-009;Командная строка::Ходовые команды;sc;Как вывести последние 20 строк файла <code>app.log</code>?
+id-cli-commands-sc-010;Командная строка::Ходовые команды;sc;Что делает <code>tail -f app.log</code>?
+id-cli-commands-sc-011;Командная строка::Ходовые команды;sc;Что сделает <code>cat a.txt b.txt > all.txt</code>?
+id-cli-commands-sc-012;Командная строка::Ходовые команды;sc;Как рекурсивно найти строку <code>error</code> во всех файлах текущего каталога?
+id-cli-commands-sc-013;Командная строка::Ходовые команды;sc;Как найти все файлы с расширением <code>.log</code> в текущем каталоге и подкаталогах?
+id-cli-commands-sc-014;Командная строка::Ходовые команды;sc;Зачем шаблон в <code>find . -name '*.log'</code> берут в кавычки?
+id-cli-commands-sc-015;Командная строка::Ходовые команды;sc;Как узнать, какой исполняемый файл запустится по команде <code>node</code>?
+id-cli-commands-sc-016;Командная строка::Ходовые команды;sc;Как открыть справку по команде <code>tar</code>?
+id-cli-commands-sc-017;Командная строка::Ходовые команды;sc;Что выведет <code>echo $HOME</code>?
+id-cli-commands-sc-018;Командная строка::Ходовые команды;sc;Что делает <code>chmod +x deploy.sh</code>?
+id-cli-commands-sc-019;Командная строка::Ходовые команды;sc;Что означают права в <code>chmod 644 file</code>?
+id-cli-commands-sc-020;Командная строка::Ходовые команды;sc;Чем опасна строка <code>rm -rf $DIR/*</code> в скрипте?
+id-cli-commands-sc-021;Командная строка::Ходовые команды;sc;Почему <code>kill -9</code> используют только в крайнем случае?
