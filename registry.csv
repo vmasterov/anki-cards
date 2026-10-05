@@ -59,3 +59,58 @@ id-cli-commands-sc-018;Командная строка::Ходовые кома�
 id-cli-commands-sc-019;Командная строка::Ходовые команды;sc;Что означают права в <code>chmod 644 file</code>?
 id-cli-commands-sc-020;Командная строка::Ходовые команды;sc;Чем опасна строка <code>rm -rf $DIR/*</code> в скрипте?
 id-cli-commands-sc-021;Командная строка::Ходовые команды;sc;Почему <code>kill -9</code> используют только в крайнем случае?
+id-js-basics-kprim-006;JavaScript::Основы и типы;kprim;Логические операторы. Верно или неверно?
+id-js-basics-kprim-007;JavaScript::Основы и типы;kprim;Объявление переменных. Верно или неверно?
+id-js-basics-kprim-008;JavaScript::Основы и типы;kprim;Конструкция <code>switch</code>. Верно или неверно?
+id-js-basics-mc-005;JavaScript::Основы и типы;mc;Какие выражения вернут <code>'default'</code>?
+id-js-basics-mc-006;JavaScript::Основы и типы;mc;Какие циклы перебирают значения массива <code>arr</code>?
+id-js-basics-sc-022;JavaScript::Основы и типы;sc;Что вернёт <code>0 || 'x'</code>?
+id-js-basics-sc-023;JavaScript::Основы и типы;sc;Что вернёт <code>1 && 'a' && 0 && 'b'</code>?
+id-js-basics-sc-024;JavaScript::Основы и типы;sc;Что вернёт <code>0 ?? 'x'</code>?
+id-js-basics-sc-025;JavaScript::Основы и типы;sc;Что вернёт <code>user?.address?.city</code>, если <code>user = {}</code>?
+id-js-basics-sc-026;JavaScript::Основы и типы;sc;Что делает запись <code>callback?.()</code>?
+id-js-basics-sc-027;JavaScript::Основы и типы;sc;Чему будет равно <code>a</code>?<pre><code>let a = 0<br>a ??= 5</code></pre>
+id-js-basics-sc-028;JavaScript::Основы и типы;sc;Что вернёт <code>2 ** 3 ** 2</code>?
+id-js-basics-sc-029;JavaScript::Основы и типы;sc;Что произойдёт при вычислении <code>-2 ** 2</code>?
+id-js-basics-sc-030;JavaScript::Основы и типы;sc;Что выведет код?<pre><code>let i = 1<br>console.log(i++ + ++i)</code></pre>
+id-js-basics-sc-031;JavaScript::Основы и типы;sc;Что произойдёт при выполнении <code>a || b ?? c</code>?
+id-js-basics-sc-032;JavaScript::Основы и типы;sc;Когда для значения по умолчанию нужен <code>??</code>, а не <code>||</code>?
+id-js-basics-sc-033;JavaScript::Основы и типы;sc;Что выведет код?<pre><code>switch ('1') {<br>  case 1:<br>    console.log('число')<br>    break<br>  default:<br>    console.log('другое')<br>}</code></pre>
+id-js-basics-sc-034;JavaScript::Основы и типы;sc;Что выведет код?<pre><code>switch (2) {<br>  case 1: console.log('a')<br>  case 2: console.log('b')<br>  case 3: console.log('c')<br>}</code></pre>
+id-js-basics-sc-035;JavaScript::Основы и типы;sc;Что перебирает <code>for (const k in ['a', 'b'])</code>?
+id-js-basics-sc-036;JavaScript::Основы и типы;sc;Что произойдёт при выполнении <code>for (const x of { a: 1 })</code>?
+id-js-basics-sc-037;JavaScript::Основы и типы;sc;Что делает <code>break outer</code> во вложенном цикле?
+id-js-basics-sc-038;JavaScript::Основы и типы;sc;Что вернёт функция?<pre><code>function f() {<br>  return<br>  { ok: true }<br>}</code></pre>
+id-js-basics-sc-039;JavaScript::Основы и типы;sc;Чем <code>do…while</code> отличается от <code>while</code>?
+id-js-basics-sc-040;JavaScript::Основы и типы;sc;Что выведет код?<pre><code>console.log(x)<br>var x = 5</code></pre>
+id-js-basics-sc-041;JavaScript::Основы и типы;sc;Что выведет код?<pre><code>const user = { name: 'A' }<br>user.name = 'B'<br>console.log(user.name)</code></pre>
+id-js-basics-sc-042;JavaScript::Основы и типы;sc;Что выведет код?<pre><code>let x = 1<br>{<br>  console.log(x)<br>  let x = 2<br>}</code></pre>
+id-js-basics-sc-043;JavaScript::Основы и типы;sc;Почему в современном коде по умолчанию пишут <code>const</code>, а <code>let</code> — только при переприсваивании?
+id-js-data-kprim-001;JavaScript::Структуры данных;kprim;Методы перебора. Верно или неверно?
+id-js-data-kprim-002;JavaScript::Структуры данных;kprim;Сортировка массивов. Верно или неверно?
+id-js-data-kprim-003;JavaScript::Структуры данных;kprim;Массивы как объекты. Верно или неверно?
+id-js-data-mc-001;JavaScript::Структуры данных;mc;Какие из методов меняют исходный массив?
+id-js-data-mc-002;JavaScript::Структуры данных;mc;Какими способами можно проверить, есть ли в массиве <code>arr</code> значение NaN?
+id-js-data-mc-003;JavaScript::Структуры данных;mc;Какие вызовы вернут пустой массив <code>[]</code>?
+id-js-data-sc-001;JavaScript::Структуры данных;sc;Что вернёт <code>arr.push(4)</code>, если <code>arr = [1, 2, 3]</code>?
+id-js-data-sc-002;JavaScript::Структуры данных;sc;Чем <code>slice</code> отличается от <code>splice</code>?
+id-js-data-sc-003;JavaScript::Структуры данных;sc;Что вернёт <code>['1', '2', '3'].map(parseInt)</code>?
+id-js-data-sc-004;JavaScript::Структуры данных;sc;Что вернёт <code>[1, 2, 3].forEach(x => x * 2)</code>?
+id-js-data-sc-005;JavaScript::Структуры данных;sc;Что вернёт <code>[3, 1, 2].find(x => x > 5)</code>?
+id-js-data-sc-006;JavaScript::Структуры данных;sc;Что вернёт <code>[].every(x => x > 0)</code>?
+id-js-data-sc-007;JavaScript::Структуры данных;sc;Что вернёт <code>[1, [2, [3, [4]]]].flat()</code>?
+id-js-data-sc-008;JavaScript::Структуры данных;sc;Что вернёт <code>[1, 2, 3].reduce((acc, x) => acc + x, '')</code>?
+id-js-data-sc-009;JavaScript::Структуры данных;sc;Что произойдёт при вызове <code>[].reduce((a, b) => a + b)</code>?
+id-js-data-sc-010;JavaScript::Структуры данных;sc;Что создаёт <code>new Array(3)</code>?
+id-js-data-sc-011;JavaScript::Структуры данных;sc;Что вернёт <code>Array.from({ length: 3 }, (_, i) => i * 2)</code>?
+id-js-data-sc-012;JavaScript::Структуры данных;sc;Что вернёт <code>[1, 2, 3].at(-1)</code>?
+id-js-data-sc-013;JavaScript::Структуры данных;sc;Что вернёт <code>a === b</code>?<pre><code>const a = [3, 1, 2]<br>const b = a.sort()</code></pre>
+id-js-data-sc-014;JavaScript::Структуры данных;sc;Как получить отсортированную копию массива, не меняя исходный?
+id-js-data-sc-015;JavaScript::Структуры данных;sc;Как правильно отсортировать числа по возрастанию?
+id-js-data-sc-016;JavaScript::Структуры данных;sc;Что вернёт <code>['ёж', 'яма', 'еда'].sort()</code>?
+id-js-data-sc-017;JavaScript::Структуры данных;sc;Как сделать поверхностную копию массива <code>arr</code>?
+id-js-data-sc-018;JavaScript::Структуры данных;sc;Что выведет код?<pre><code>const a = [1, 2, 3]<br>a.length = 1<br>console.log(a)</code></pre>
+id-js-data-sc-019;JavaScript::Структуры данных;sc;Что останется после <code>delete arr[1]</code>, если <code>arr = [1, 2, 3]</code>?
+id-js-data-sc-020;JavaScript::Структуры данных;sc;Что вернёт <code>['a b', 'c'].flatMap(s => s.split(' '))</code>?
+id-js-data-sc-021;JavaScript::Структуры данных;sc;Когда стоит выбрать <code>for…of</code> вместо <code>forEach</code>?
+id-js-data-sc-022;JavaScript::Структуры данных;sc;Чем может быть плоха цепочка <code>arr.filter(...).map(...)</code> на очень большом массиве?
