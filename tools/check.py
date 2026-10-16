@@ -10,41 +10,42 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
+import deck_index
 import deck_io
-import registry
-import validators
+import notetypes
 
 ROOT = Path(__file__).resolve().parent.parent
-REGISTRY_PATH = ROOT / "registry.csv"
+DECKS = ROOT / "decks"
 
 
 def check_file(path: Path, known: dict) -> list:
     headers, rows = deck_io.read_deck(path)
-    if deck_io.note_type(headers) != validators.ALLINONE:
+    validate = notetypes.validator_for(deck_io.note_type(headers))
+    if validate is None:
         return [f"{path.name}: тип {deck_io.note_type(headers)!r} не проверяется"]
     problems = []
+    has_guid = "guid column" in headers
     for index, row in enumerate(rows, start=1):
-        for message in validators.validate_row(row):
+        for message in validate(row, has_guid):
             problems.append(f"{path.name}:{index} — {message}")
-    for index, message in registry.find_duplicates(rows, known):
+    for index, message in deck_index.find_duplicates(rows, known):
         problems.append(f"{path.name}:{index} — {message}")
     return problems
 
 
 def resolve_targets(argument: str | None) -> list:
-    target = Path(argument) if argument else ROOT / "decks"
+    target = Path(argument) if argument else DECKS
     if target.is_file():
         return [target]
     return list(deck_io.iter_decks(target))
 
 
 def main() -> int:
-    known = registry.load(REGISTRY_PATH)
+    known, problems = deck_index.build(DECKS)
     targets = resolve_targets(sys.argv[1] if len(sys.argv) > 1 else None)
     if not targets:
         print("Колод не найдено.")
         return 0
-    problems = []
     for path in targets:
         problems.extend(check_file(path, known))
     for problem in problems:

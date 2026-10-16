@@ -5,7 +5,7 @@ ALLINONE_COLUMNS = 12
 QTYPE_KPRIM, QTYPE_MC, QTYPE_SC = "0", "1", "2"
 OPTION_SLICE = slice(3, 8)
 ANSWERS_INDEX = 8
-TAGS_INDEX = 11
+LEGACY_TAG = "noguid"
 
 
 def check_column_count(row, expected=ALLINONE_COLUMNS):
@@ -43,15 +43,31 @@ def check_question_not_empty(row):
     return "пустой вопрос" if not row[0].strip() else None
 
 
+def card_id(row):
+    """Тег-идентификатор. Теги всегда в последней колонке."""
+    return next((tag for tag in row[-1].split() if tag.startswith("id-")), None)
+
+
 def check_id_tag(row):
-    tags = row[TAGS_INDEX].split()
-    if not any(tag.startswith("id-") for tag in tags):
-        return "нет тега-идентификатора id-*"
+    return None if card_id(row) else "нет тега-идентификатора id-*"
+
+
+def check_guid(row):
+    """GUID равен id. Пустой допустим только у старых карточек с тегом noguid.
+
+    GUID всегда предпоследняя колонка, теги — последняя, в любом типе заметки.
+    """
+    guid = row[-2].strip()
+    if not guid:
+        if LEGACY_TAG in row[-1].split():
+            return None
+        return f"пустой GUID без тега {LEGACY_TAG}"
+    if guid != card_id(row):
+        return f"GUID {guid} не совпадает с id {card_id(row)}"
     return None
 
 
 ALLINONE_RULES = (
-    check_column_count,
     check_qtype,
     check_answer_mask,
     check_question_not_empty,
@@ -59,9 +75,16 @@ ALLINONE_RULES = (
 )
 
 
-def validate_row(row, rules=ALLINONE_RULES):
-    """Список сообщений об ошибках для одной строки."""
-    if (problem := check_column_count(row)) is not None:
+def run_rules(row, columns, rules, has_guid):
+    """Общий прогон для любого типа: число колонок, затем правила по очереди."""
+    expected = columns + (1 if has_guid else 0)
+    if (problem := check_column_count(row, expected)) is not None:
         return [problem]
+    rules = rules + ((check_guid,) if has_guid else ())
     return [message for rule in rules
             if (message := rule(row)) is not None]
+
+
+def validate_row(row, has_guid=False):
+    """Список сообщений об ошибках для строки AllInOne."""
+    return run_rules(row, ALLINONE_COLUMNS, ALLINONE_RULES, has_guid)
